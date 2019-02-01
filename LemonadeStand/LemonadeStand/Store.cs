@@ -8,17 +8,9 @@ namespace LemonadeStand
     public class Store
     {
         private int lemonSmallBulk;
-        private int lemonMediumBulk;
         private int iceSmallBulk;
-        private int iceMediumBulk;
-        private int iceLargeBulk;
-        private int sugarLargeBulk;
-        private int sugarMediumBulk;
         private int sugarSmallBulk;
-        private int lemonLargeBulk;
         private int cupsSmallBulk;
-        private int cupsMediumBulk;
-        private int cupsLargeBulk;
 
         public void BuyLemons()
         {

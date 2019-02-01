@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    public abstract class UserInterface
+    public static class UILemStnd
     {
     }
 }

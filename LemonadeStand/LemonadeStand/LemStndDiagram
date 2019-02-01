@@ -28,7 +28,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>EAEAAAAAJBAAAAAAAAAAAAAAAAAAAAAAAAQAAQAAAAA=</HashCode>
+      <HashCode>AAEAAAAAJBAAAAAAAAAAAAAAAAAAAAAAAAQAAQAAAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -36,7 +36,6 @@
       <Property Name="Day" />
       <Property Name="LemonadeStand" />
       <Property Name="Store" />
-      <Property Name="UserInterface" />
     </ShowAsAssociation>
   </Class>
   <Class Name="LemonadeStand.Program" Collapsed="true">
@@ -44,9 +43,10 @@
     <AssociationLine Name="Game" Type="LemonadeStand.Game" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="0.5" Y="0.75" />
-        <Point X="0.375" Y="0.75" />
-        <Point X="0.375" Y="2.31" />
-        <Point X="0.5" Y="2.31" />
+        <Point X="0.438" Y="0.75" />
+        <Point X="0.438" Y="1.124" />
+        <Point X="1.125" Y="1.124" />
+        <Point X="1.125" Y="1.75" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -110,12 +110,12 @@
   <Class Name="LemonadeStand.Store">
     <Position X="9.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QBAAABAgIQEIEACAAAAAAAACAQAAAgAAAAgAgQAAAAA=</HashCode>
+      <HashCode>AAAAAAAgIAAIEAAAAAAAAAAAAQAAAgAAAAAAgQAAAAA=</HashCode>
       <FileName>Store.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="LemonadeStand.UserInterface">
-    <Position X="0.5" Y="3.25" Width="1.5" />
+  <Class Name="LemonadeStand.UILemStnd">
+    <Position X="1" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UserInterface.cs</FileName>

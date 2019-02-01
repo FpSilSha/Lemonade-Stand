@@ -39,14 +39,6 @@ namespace LemonadeStand
             }
         }
 
-        public UserInterface UserInterface
-        {
-            get => default(LemonadeStand.UserInterface);
-            set
-            {
-            }
-        }
-
         public void RunGame()
         {
             throw new System.NotImplementedException();
