@@ -23,9 +23,9 @@ namespace LemonadeStand
             }
         }
 
-        public LemonadeStand LemonadeStand
+        public Player LemonadeStand
         {
-            get => default(LemonadeStand.LemonadeStand);
+            get => default(Player.LemonadeStand);
             set
             {
             }
@@ -33,7 +33,7 @@ namespace LemonadeStand
 
         public Store Store
         {
-            get => default(LemonadeStand.Store);
+            get => default(Player.Store);
             set
             {
             }
@@ -41,7 +41,7 @@ namespace LemonadeStand
 
         public Day Day1
         {
-            get => default(LemonadeStand.Day);
+            get => default(Player.Day);
             set
             {
             }

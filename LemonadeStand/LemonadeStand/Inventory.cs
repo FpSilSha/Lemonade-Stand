@@ -7,7 +7,12 @@ namespace LemonadeStand
 {
     public class Inventory
     {
-       
-       
+        public LemonadeRecipe LemonadeRecipe
+        {
+            get => default(LemonadeRecipe);
+            set
+            {
+            }
+        }
     }
 }

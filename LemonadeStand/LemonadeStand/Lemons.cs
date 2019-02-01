@@ -5,30 +5,7 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    abstract class Ingredient
+    public class Lemon : Ingredient
     {
-
-        private int shelfLife;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    public class LemonadeStand
+    public class Player
     {
         private int currentRecipe;
         private int price;
@@ -13,7 +13,7 @@ namespace LemonadeStand
 
         public Inventory Inventory
         {
-            get => default(LemonadeStand.Inventory);
+            get => default(Player.Inventory);
             set
             {
             }

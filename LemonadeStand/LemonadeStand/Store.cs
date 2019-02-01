@@ -12,6 +12,14 @@ namespace LemonadeStand
         private int sugarSmallBulk;
         private int cupsSmallBulk;
 
+        internal Ingredient Ingredient
+        {
+            get => default(Ingredient);
+            set
+            {
+            }
+        }
+
         public void BuyLemons()
         {
             throw new System.NotImplementedException();
