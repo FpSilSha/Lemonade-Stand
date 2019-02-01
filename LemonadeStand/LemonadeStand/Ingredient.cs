@@ -5,9 +5,10 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    public class Inventory
+    abstract class Ingredient
     {
-       
-       
+
+
+
     }
 }

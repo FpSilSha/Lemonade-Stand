@@ -39,6 +39,14 @@ namespace LemonadeStand
             }
         }
 
+        public Day Day1
+        {
+            get => default(LemonadeStand.Day);
+            set
+            {
+            }
+        }
+
         public void RunGame()
         {
             throw new System.NotImplementedException();
