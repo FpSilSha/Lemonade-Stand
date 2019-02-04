@@ -9,15 +9,18 @@ namespace LemonadeStand
     {
         private int currentWeather;
         private int currentForcast;
+        List<string> possibleWeather = new List<string>() { "Sunny", "Rainny", "Cloudy" };
+        Random rnd = new Random();
 
         public void ChangeWeather()
         {
+
             throw new System.NotImplementedException();
         }
 
         public void UpdateForcast()
         {
-            throw new System.NotImplementedException();
+          
         }
     }
 }

@@ -10,13 +10,13 @@ namespace LemonadeStand
         
         protected int weatherModifier;
         protected int priceModifier;
-        protected int buyChance;
+        protected int buyChance = 90;
         
 
-        public virtual void BuyLemonade()
+        public void BuyLemonade()
         {
-            CheckWeather();
-            CheckPrice();
+            weatherModifier = CheckWeather();
+            priceModifier = CheckPrice();
 
 
 

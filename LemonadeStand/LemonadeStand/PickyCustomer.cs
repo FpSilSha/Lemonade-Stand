@@ -10,9 +10,17 @@ namespace LemonadeStand
     {
 
 
+        protected override int CheckPrice()
+        {
 
+            return 0;
+        }
 
-
+        protected override int CheckWeather()
+        {
+            
+            return 0;
+        }
 
 
     }

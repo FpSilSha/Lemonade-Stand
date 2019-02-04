@@ -9,15 +9,8 @@ namespace LemonadeStand
     {
         private int daysLeft;
         private int hoursLeft;
-
-        public Weather Weather
-        {
-            get => default(Weather);
-            set
-            {
-            }
-        }
-
+        Weather weather = new Weather();
+       
         public void StartDay()
         {
             throw new System.NotImplementedException();
