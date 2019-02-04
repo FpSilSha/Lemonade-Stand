@@ -7,20 +7,20 @@ namespace LemonadeStand
 {
     public class Weather
     {
-        private int currentWeather;
-        private int currentForcast;
+        
+        public List<string> currentForcast = new List<string>();
+
         List<string> possibleWeather = new List<string>() { "Sunny", "Rainny", "Cloudy" };
         Random rnd = new Random();
 
-        public void ChangeWeather()
-        {
+      
 
-            throw new System.NotImplementedException();
-        }
+        
 
         public void UpdateForcast()
         {
-          
+            
+
         }
     }
 }

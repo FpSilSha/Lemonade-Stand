@@ -9,13 +9,13 @@ namespace LemonadeStand
     {
 
        Player playerOne = new Player();
-       
+       Day day = new Day();
        
 
         public void RunGame()
         {
-           
-            throw new System.NotImplementedException();
+            day.StartDay();
+            
         }
 
         
