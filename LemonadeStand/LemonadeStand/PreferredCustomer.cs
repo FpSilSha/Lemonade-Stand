@@ -6,15 +6,8 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Program
+    public class PreferredCustomer:Customer
     {
-       
-
-        static void Main(string[] args)
-        {
-            Game game = new Game();
-
-            game.RunGame();
 
 
 
@@ -22,11 +15,5 @@ namespace LemonadeStand
 
 
 
-
-
-
-
-
-        }
     }
 }

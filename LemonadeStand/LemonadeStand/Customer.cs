@@ -7,8 +7,39 @@ namespace LemonadeStand
 {
     public abstract class Customer
     {
-        private int weatherPreference;
-        private int pricePreference;
-        private int recipePreference;
+        
+        protected int weatherModifier;
+        protected int priceModifier;
+        protected int buyChance;
+        
+
+        public virtual void BuyLemonade()
+        {
+            CheckWeather();
+            CheckPrice();
+
+
+
+        }
+
+        protected virtual int CheckWeather()
+        {
+
+            return 0;
+        }
+
+
+
+        protected virtual int CheckPrice()
+        {
+
+            return 0;
+        }
+      
+        
+
+
+
+
     }
 }

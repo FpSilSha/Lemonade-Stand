@@ -7,17 +7,17 @@ namespace LemonadeStand
 {
     public class Game
     {
-        
-     
+
+       Player playerOne = new Player();
+       
+       
 
         public void RunGame()
         {
+           
             throw new System.NotImplementedException();
         }
 
-        public void PlayAgain()
-        {
-            throw new System.NotImplementedException();
-        }
+        
     }
 }
