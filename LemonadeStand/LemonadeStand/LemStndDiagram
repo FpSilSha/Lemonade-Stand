@@ -2,23 +2,6 @@
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="LemonadeStand.Game">
     <Position X="0.5" Y="1.75" Width="1.5" />
-    <AssociationLine Name="Day" Type="LemonadeStand.Day" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="2" Y="2.582" />
-        <Point X="3.688" Y="2.582" />
-        <Point X="3.688" Y="3.752" />
-        <Point X="6" Y="3.752" />
-        <Point X="6" Y="3.69" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="LemonadeStand" Type="LemonadeStand.Player" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="1.5" Y="1.75" />
-        <Point X="1.5" Y="1.375" />
-        <Point X="8.125" Y="1.375" />
-        <Point X="8.125" Y="1.75" />
-      </Path>
-    </AssociationLine>
     <AssociationLine Name="Store" Type="LemonadeStand.Store" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="1.625" Y="1.75" />
@@ -27,16 +10,23 @@
         <Point X="10" Y="1.75" />
       </Path>
     </AssociationLine>
+    <AssociationLine Name="Day" Type="LemonadeStand.Day" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2" Y="2.582" />
+        <Point X="3.688" Y="2.582" />
+        <Point X="3.688" Y="3.69" />
+        <Point X="6" Y="3.69" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAEAAAAAJBAAAAAAAAAAABAAAAAAAAAAAAQAAQAAAAA=</HashCode>
+      <HashCode>AAEAAAAAJAAAAAAAAAAAABAAAAAAAAAAAAQAAQAAAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Customer" />
-      <Property Name="Day" />
-      <Property Name="LemonadeStand" />
       <Property Name="Store" />
       <Property Name="Day1" />
+      <Property Name="Customer" />
+      <Property Name="Day" />
     </ShowAsAssociation>
   </Class>
   <Class Name="LemonadeStand.Program" Collapsed="true">
