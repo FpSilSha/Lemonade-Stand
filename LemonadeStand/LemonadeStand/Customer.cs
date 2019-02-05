@@ -52,10 +52,10 @@ namespace LemonadeStand
             }
         }
 
-        public void BuyLemonade(Weather weather)
+        public void BuyLemonade(Weather weather, LemonadeStand lemonadeStand)
         {
             weatherModifier = CheckWeather(weather);
-            priceModifier = CheckPrice();
+            priceModifier = CheckPrice(lemonadeStand);
 
 
 
@@ -125,10 +125,79 @@ namespace LemonadeStand
 
 
 
-        private int CheckPrice()
+        private int CheckPrice(LemonadeStand lemonadeStand)
         {
 
-            return 0;
+            int numberChange = 0;
+
+            switch (customerType)
+            {
+                case "mild":
+
+
+                    if (lemonadeStand.pricePerCup <= .25)
+                    {
+                        numberChange = 10;
+                    }
+                    else if (lemonadeStand.pricePerCup <= .55 && lemonadeStand.pricePerCup > .25 )
+                    {
+                        numberChange = -5;
+                    }
+                    else if (lemonadeStand.pricePerCup > .55 && lemonadeStand.pricePerCup <= .85)
+                    {
+                        numberChange = -15;
+                    }
+                    else
+                    {
+                        numberChange = -30;
+                    }
+                    break;
+
+                case "picky":
+
+
+                    if (lemonadeStand.pricePerCup <= .25)
+                    {
+                        numberChange = 5;
+                    }
+                    else if (lemonadeStand.pricePerCup <= .55 && lemonadeStand.pricePerCup > .25)
+                    {
+                        numberChange = -15;
+                    }
+                    else if (lemonadeStand.pricePerCup > .55 && lemonadeStand.pricePerCup <= .85)
+                    {
+                        numberChange = -20;
+                    }
+                    else
+                    {
+                        numberChange = -30;
+                    }
+                    break;
+
+                case "preferred":
+
+
+                    if (lemonadeStand.pricePerCup <= .25)
+                    {
+                        numberChange = 10;
+                    }
+                    else if (lemonadeStand.pricePerCup <= .55 && lemonadeStand.pricePerCup > .25)
+                    {
+                        numberChange = 0;
+                    }
+                    else if (lemonadeStand.pricePerCup > .55 && lemonadeStand.pricePerCup <= .85)
+                    {
+                        numberChange = -10;
+                    }
+                    else
+                    {
+                        numberChange = -30;
+                    }
+                    break;
+
+            }
+            return numberChange;
+
         }
       
         
