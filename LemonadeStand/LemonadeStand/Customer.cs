@@ -52,20 +52,76 @@ namespace LemonadeStand
             }
         }
 
-        //public void BuyLemonade()
-        //{
-        //    weatherModifier = CheckWeather();
-        //    priceModifier = CheckPrice();
+        public void BuyLemonade(Weather weather)
+        {
+            weatherModifier = CheckWeather(weather);
+            priceModifier = CheckPrice();
 
 
 
-        //}
+        }
 
-        //private int CheckWeather(Weather weather)
-        //{
-        //    weather.todaysWeather;
-        //    return 0;
-        //}
+        private int CheckWeather(Weather weather)
+        {
+            int numberChange = 0;
+
+            switch (customerType)
+            {
+                case "mild":
+
+                   
+                    if (weather.todaysWeather == "sunny")
+                    {
+                        numberChange = 10;
+                    }
+                    else if (weather.todaysWeather == "cloudy")
+                    {
+                        numberChange = -5;
+                    }
+                    else if (weather.todaysWeather == "raining")
+                    {
+                        numberChange = -10;
+                    }
+                    break;
+
+                case "picky":
+
+                   
+                    if (weather.todaysWeather == "sunny")
+                    {
+                        numberChange = 10;
+                    }
+                    else if (weather.todaysWeather == "cloudy")
+                    {
+                        numberChange = -10;
+                    }
+                    else if (weather.todaysWeather == "raining")
+                    {
+                        numberChange = -15;
+                    }
+                    break;
+
+                case "preferred":
+
+                    
+                    if (weather.todaysWeather == "sunny")
+                    {
+                        numberChange = 15;
+                    }
+                    else if (weather.todaysWeather == "cloudy")
+                    {
+                        numberChange = 5;
+                    }
+                    else if (weather.todaysWeather == "raining")
+                    {
+                        numberChange = -5;
+                    }
+                    break;
+                
+
+            }
+            return numberChange;
+        }
 
 
 
