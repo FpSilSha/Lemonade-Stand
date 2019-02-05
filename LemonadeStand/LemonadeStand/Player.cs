@@ -15,7 +15,7 @@ namespace LemonadeStand
 
         public void ChangeRecipe()
         {
-            throw new System.NotImplementedException();
+            
         }
 
        

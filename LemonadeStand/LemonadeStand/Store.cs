@@ -7,37 +7,67 @@ namespace LemonadeStand
 {
     public class Store
     {
-        private int lemonSmallBulk;
-        private int iceSmallBulk;
-        private int sugarSmallBulk;
-        private int cupsSmallBulk;
 
-        internal Ingredient Ingredient
+        public Store(Player player, Inventory inventory)
         {
-            get => default(Ingredient);
-            set
+
+        }
+        public Action StoreMenu(Player player, Inventory inventory)
+        {
+            int optionChoice;
+            UI.DisplayInfo("What would you like to buy? \n Enter 0 for Cups, 1 for Lemons, 2 for Sugar, and 3 for Ice.");
+            optionChoice = UI.NumberCheck();
+
+            switch (optionChoice)
             {
+                case 0:
+                    BuyCups(player, inventory);
+                    break;
+                case 1:
+                    BuyLemons(player, inventory);
+                    break;
+                case 2:
+                    BuySugar(player, inventory);
+                    break;
+                case 3:
+                    BuyIce(player, inventory);
+                    break;
+               
+
+            }
+
+            UI.DisplayInfo("Would you like to make another purchase?");
+            string yesNoCatch = UI.YesNoCheck();
+
+            if(yesNoCatch == "yes")
+            { 
+            return StoreMenu(player, inventory);
+            }
+            else
+            {
+                return null;
             }
         }
+      
 
-        public void BuyLemons()
+        public void BuyLemons(Player player, Inventory inventory)
         {
-            throw new System.NotImplementedException();
+               
         }
 
-        public void BuySugar()
+        public void BuySugar(Player player, Inventory inventory)
         {
-            throw new System.NotImplementedException();
+          
         }
 
-        public void BuyCups()
+        public void BuyCups(Player player, Inventory inventory)
         {
-            throw new System.NotImplementedException();
+
         }
 
-        public void BuyIce()
+        public void BuyIce(Player player, Inventory inventory)
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }

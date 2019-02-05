@@ -42,7 +42,7 @@ namespace LemonadeStand
             {
                 Console.WriteLine("Please enter a whole number");
                 if (tryCounter > 0)
-                    Console.WriteLine("Please keep the whole number positive, and a realistic number of playable days");
+                    Console.WriteLine("Please keep the whole number positive, and realistic");
                 try
                 {
                     numberCatch = Convert.ToInt16(Console.ReadLine());
@@ -64,7 +64,31 @@ namespace LemonadeStand
 
         }
 
-
+        public static string YesNoCheck()
+        {
+            bool cont = true;
+            string yesNoCatch = null;
+            do
+            {
+                try
+                {
+                    DisplayInfo("\nPlease enter yes or no:\n");
+                    yesNoCatch = Console.ReadLine();
+                }
+                catch(OverflowException)
+                {
+                    DisplayInfo("Input wasn't valid. Please choose again.");
+                }
+                    yesNoCatch = yesNoCatch.ToLower();
+                if (yesNoCatch == "yes" || yesNoCatch == "no")
+                {
+                    cont = false;
+                }
+               
+            }
+            while (cont);
+            return yesNoCatch;
+        }
 
 
 
