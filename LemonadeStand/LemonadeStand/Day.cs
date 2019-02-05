@@ -15,6 +15,7 @@ namespace LemonadeStand
         List<string> daysOfTheWeek = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
         Weather weather = new Weather();
        
+       
         
         public void StartDay()
         {
@@ -49,6 +50,12 @@ namespace LemonadeStand
         {
             todaysWeather = weather.currentForcast[forcastCounter];
             forcastCounter++;
+        }
+
+        public void CustomerCreator()
+        {
+
+
         }
     }
 }

@@ -16,12 +16,23 @@ namespace LemonadeStand
         public Customer()
         {
             ChooseType();
-
+            SetChance();
         }
 
         private void SetChance()
         {
-
+            switch (customerType)
+            {
+                case "mild":
+                    buyChance = 70;
+                    break;
+                case "picky":
+                    buyChance = 60;
+                    break;
+                case "preferred":
+                    buyChance = 85;
+                    break;
+            }
         }
         public void ChooseType()
         {
@@ -52,7 +63,7 @@ namespace LemonadeStand
 
         private int CheckWeather()
         {
-
+            
             return 0;
         }
 
