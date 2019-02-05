@@ -10,7 +10,7 @@ namespace LemonadeStand
         
         public List<string> currentForcast = new List<string>();
         
-        List<string> possibleWeather = new List<string>() { "Sunny", "Rainy", "Cloudy" };
+        List<string> possibleWeather = new List<string>() { "Sunny", "Raining", "Cloudy" };
         Random rnd = new Random();
 
       

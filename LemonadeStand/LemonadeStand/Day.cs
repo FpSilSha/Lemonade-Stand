@@ -31,9 +31,8 @@ namespace LemonadeStand
            
             ChangeDay();
             ChangeWeather();
-            
-            UI.DisplayInfo(todaysWeather);
-            UI.DisplayInfo(dayOfWeek);
+
+            UI.DisplayCurrentDay(dayOfWeek, todaysWeather);
         }
 
         public void ChangeDay()

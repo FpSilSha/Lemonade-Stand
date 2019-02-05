@@ -14,6 +14,10 @@ namespace LemonadeStand
             Console.WriteLine(words);
         }
 
+        public static void DisplayCurrentDay(string day, string weather)
+        {
+            Console.WriteLine($"Today is {day} and it is {weather} outside.");
+        }
         public static void DisplayForcast(List<string> weatherForcast, List<string> daysOfTheWeek)
         {
             int loopCount;
