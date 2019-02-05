@@ -7,7 +7,7 @@ namespace LemonadeStand
 {
     public class LemonadeStand
     {
-
+        double pricePerCup;
         LemonadeRecipe standRecipe = new LemonadeRecipe();
         
 

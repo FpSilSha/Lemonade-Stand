@@ -9,8 +9,8 @@ namespace LemonadeStand
     {
         private int daysLeft;
         private int hoursLeft;
-        private int forcastCounter = 0;
-        private string todaysWeather;
+        
+        
         private string dayOfWeek;
         List<string> daysOfTheWeek = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
         Weather weather = new Weather();
@@ -20,25 +20,25 @@ namespace LemonadeStand
         public void StartDay()
         {
             
-            if (forcastCounter == 7)
+            if (weather.forcastCounter == 7)
             {
-                forcastCounter = 0;
+                weather.forcastCounter = 0;
             }
-            if (forcastCounter == 0)
+            if (weather.forcastCounter == 0)
             {
                 weather.UpdateForcast();
                 UI.DisplayForcast(weather.currentForcast, daysOfTheWeek);
             }
            
             ChangeDay();
-            ChangeWeather();
+            weather.ChangeWeather();
 
-            UI.DisplayCurrentDay(dayOfWeek, todaysWeather);
+            UI.DisplayCurrentDay(dayOfWeek, weather.todaysWeather);
         }
 
         public void ChangeDay()
         {
-            dayOfWeek = daysOfTheWeek[forcastCounter];
+            dayOfWeek = daysOfTheWeek[weather.forcastCounter];
         }
 
         public void ChangeHour()
@@ -46,11 +46,7 @@ namespace LemonadeStand
             throw new System.NotImplementedException();
         }
 
-        public void ChangeWeather()
-        {
-            todaysWeather = weather.currentForcast[forcastCounter];
-            forcastCounter++;
-        }
+        
 
         public void CustomerCreator()
         {

@@ -7,15 +7,20 @@ namespace LemonadeStand
 {
     public class Weather
     {
-        
+        internal string todaysWeather;
+        internal int forcastCounter = 0;
         public List<string> currentForcast = new List<string>();
         
         List<string> possibleWeather = new List<string>() { "Sunny", "Raining", "Cloudy" };
         Random rnd = new Random();
 
-      
 
-        
+
+        public void ChangeWeather()
+        {
+            todaysWeather = currentForcast[forcastCounter];
+            forcastCounter++;
+        }
 
         public void UpdateForcast()
         {

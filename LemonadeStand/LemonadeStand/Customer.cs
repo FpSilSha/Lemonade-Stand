@@ -13,7 +13,7 @@ namespace LemonadeStand
         private int buyChance;
         private string customerType;
 
-        public Customer()
+        public Customer(LemonadeStand lemonadeStand)
         {
             ChooseType();
             SetChance();
@@ -52,20 +52,20 @@ namespace LemonadeStand
             }
         }
 
-        public void BuyLemonade()
-        {
-            weatherModifier = CheckWeather();
-            priceModifier = CheckPrice();
+        //public void BuyLemonade()
+        //{
+        //    weatherModifier = CheckWeather();
+        //    priceModifier = CheckPrice();
 
 
 
-        }
+        //}
 
-        private int CheckWeather()
-        {
-            
-            return 0;
-        }
+        //private int CheckWeather(Weather weather)
+        //{
+        //    weather.todaysWeather;
+        //    return 0;
+        //}
 
 
 
