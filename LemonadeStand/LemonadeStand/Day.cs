@@ -21,6 +21,7 @@ namespace LemonadeStand
             {
                 forcastCounter = 0;
             }
+            weather.UpdateForcast();
             ChangeWeather();
             Console.WriteLine(todaysWeather);
             Console.ReadKey();

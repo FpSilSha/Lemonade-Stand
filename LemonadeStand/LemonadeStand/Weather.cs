@@ -9,8 +9,8 @@ namespace LemonadeStand
     {
         
         public List<string> currentForcast = new List<string>();
-
-        List<string> possibleWeather = new List<string>() { "Sunny", "Rainny", "Cloudy" };
+        
+        List<string> possibleWeather = new List<string>() { "Sunny", "Rainy", "Cloudy" };
         Random rnd = new Random();
 
       
@@ -19,7 +19,19 @@ namespace LemonadeStand
 
         public void UpdateForcast()
         {
+            currentForcast = null;
+            List<string> newForcast = new List<string>();
+            int dayCounter = 7;
+            while(dayCounter > 0)
+            {
+                int index = rnd.Next(possibleWeather.Count);
+                newForcast.Add(possibleWeather[index]);
+                dayCounter--;
+            }
+            currentForcast = newForcast;
             
+            
+                
 
         }
     }
