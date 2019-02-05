@@ -8,10 +8,10 @@ namespace LemonadeStand
     public  class Customer
     {
         
-        protected int weatherModifier;
-        protected int priceModifier;
-        protected int buyChance;
-        protected string customerType;
+        private int weatherModifier;
+        private int priceModifier;
+        private int buyChance;
+        private string customerType;
 
         public Customer()
         {
@@ -50,7 +50,7 @@ namespace LemonadeStand
 
         }
 
-        protected int CheckWeather()
+        private int CheckWeather()
         {
 
             return 0;
@@ -58,7 +58,7 @@ namespace LemonadeStand
 
 
 
-        protected int CheckPrice()
+        private int CheckPrice()
         {
 
             return 0;
