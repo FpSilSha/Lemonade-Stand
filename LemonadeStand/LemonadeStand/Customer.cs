@@ -5,13 +5,41 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    public abstract class Customer
+    public  class Customer
     {
         
         protected int weatherModifier;
         protected int priceModifier;
-        protected int buyChance = 90;
-        
+        protected int buyChance;
+        protected string customerType;
+
+        public Customer()
+        {
+            ChooseType();
+
+        }
+
+        private void SetChance()
+        {
+
+        }
+        public void ChooseType()
+        {
+            Random rng = new Random();
+            int randomNumber = rng.Next(0,101);
+            if (randomNumber <= 30)
+            {
+                customerType = "mild";
+            }
+            else if (randomNumber >=80)
+            {
+                customerType = "picky";
+            }
+            else
+            {
+                customerType = "preferred";
+            }
+        }
 
         public void BuyLemonade()
         {
@@ -22,7 +50,7 @@ namespace LemonadeStand
 
         }
 
-        protected virtual int CheckWeather()
+        protected int CheckWeather()
         {
 
             return 0;
@@ -30,7 +58,7 @@ namespace LemonadeStand
 
 
 
-        protected virtual int CheckPrice()
+        protected int CheckPrice()
         {
 
             return 0;

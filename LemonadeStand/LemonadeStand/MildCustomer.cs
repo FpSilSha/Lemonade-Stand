@@ -9,7 +9,17 @@ namespace LemonadeStand
     public class MildCustomer:Customer
     {
 
+        protected override int CheckPrice()
+        {
 
+            return 0;
+        }
+
+        protected override int CheckWeather()
+        {
+
+            return 0;
+        }
 
 
 
