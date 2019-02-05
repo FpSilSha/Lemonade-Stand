@@ -7,7 +7,7 @@ namespace LemonadeStand
 {
     public class LemonadeStand
     {
-        internal double pricePerCup = 0;
+        internal decimal pricePerCup = 0.0m;
         LemonadeRecipe standRecipe = new LemonadeRecipe();
         
 

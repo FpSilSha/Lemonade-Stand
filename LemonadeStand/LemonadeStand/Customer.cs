@@ -56,8 +56,11 @@ namespace LemonadeStand
         {
             weatherModifier = CheckWeather(weather);
             priceModifier = CheckPrice(lemonadeStand);
-
-
+            buyChance = buyChance - (weatherModifier + priceModifier);
+            //if(buyChance > 50)
+            //{
+            //    Buy Lemonade!!
+            //}
 
         }
 
@@ -135,15 +138,15 @@ namespace LemonadeStand
                 case "mild":
 
 
-                    if (lemonadeStand.pricePerCup <= .25)
+                    if (lemonadeStand.pricePerCup <= .25m)
                     {
                         numberChange = 10;
                     }
-                    else if (lemonadeStand.pricePerCup <= .55 && lemonadeStand.pricePerCup > .25 )
+                    else if (lemonadeStand.pricePerCup <= .55m && lemonadeStand.pricePerCup > .25m )
                     {
                         numberChange = -5;
                     }
-                    else if (lemonadeStand.pricePerCup > .55 && lemonadeStand.pricePerCup <= .85)
+                    else if (lemonadeStand.pricePerCup > .55m && lemonadeStand.pricePerCup <= .85m)
                     {
                         numberChange = -15;
                     }
@@ -156,15 +159,15 @@ namespace LemonadeStand
                 case "picky":
 
 
-                    if (lemonadeStand.pricePerCup <= .25)
+                    if (lemonadeStand.pricePerCup <= .25m)
                     {
                         numberChange = 5;
                     }
-                    else if (lemonadeStand.pricePerCup <= .55 && lemonadeStand.pricePerCup > .25)
+                    else if (lemonadeStand.pricePerCup <= .55m && lemonadeStand.pricePerCup > .25m)
                     {
                         numberChange = -15;
                     }
-                    else if (lemonadeStand.pricePerCup > .55 && lemonadeStand.pricePerCup <= .85)
+                    else if (lemonadeStand.pricePerCup > .55m && lemonadeStand.pricePerCup <= .85m)
                     {
                         numberChange = -20;
                     }
@@ -177,15 +180,15 @@ namespace LemonadeStand
                 case "preferred":
 
 
-                    if (lemonadeStand.pricePerCup <= .25)
+                    if (lemonadeStand.pricePerCup <= .25m)
                     {
                         numberChange = 10;
                     }
-                    else if (lemonadeStand.pricePerCup <= .55 && lemonadeStand.pricePerCup > .25)
+                    else if (lemonadeStand.pricePerCup <= .55m && lemonadeStand.pricePerCup > .25m)
                     {
                         numberChange = 0;
                     }
-                    else if (lemonadeStand.pricePerCup > .55 && lemonadeStand.pricePerCup <= .85)
+                    else if (lemonadeStand.pricePerCup > .55m && lemonadeStand.pricePerCup <= .85m)
                     {
                         numberChange = -10;
                     }
