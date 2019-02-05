@@ -16,15 +16,18 @@ namespace LemonadeStand
         
         public void StartDay()
         {
-            forcastCounter++;
-            if(forcastCounter == 7)
+            
+            if (forcastCounter == 7)
             {
                 forcastCounter = 0;
             }
-            weather.UpdateForcast();
+            if (forcastCounter == 0)
+            {
+                weather.UpdateForcast();
+            }
             ChangeWeather();
             Console.WriteLine(todaysWeather);
-            Console.ReadKey();
+            
         }
 
         public void ChangeHour()
@@ -34,8 +37,8 @@ namespace LemonadeStand
 
         public void ChangeWeather()
         {
-            todaysWeather = weather.currentForcast[forcastCounter-1];
-            
+            todaysWeather = weather.currentForcast[forcastCounter];
+            forcastCounter++;
         }
     }
 }

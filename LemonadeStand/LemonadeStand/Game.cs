@@ -14,9 +14,14 @@ namespace LemonadeStand
 
         public void RunGame()
         {
-            day.StartDay();
            
+
+                day.StartDay();
+                
+                
+          
         }
+       
 
         
     }
