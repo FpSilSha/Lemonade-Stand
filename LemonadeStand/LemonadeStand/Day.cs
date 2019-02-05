@@ -11,6 +11,8 @@ namespace LemonadeStand
         private int hoursLeft;
         private int forcastCounter = 0;
         private string todaysWeather;
+        private string dayOfWeek;
+        List<string> daysOfTheWeek = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
         Weather weather = new Weather();
        
         
@@ -24,10 +26,19 @@ namespace LemonadeStand
             if (forcastCounter == 0)
             {
                 weather.UpdateForcast();
+                UI.DisplayForcast(weather.currentForcast, daysOfTheWeek);
             }
+           
+            ChangeDay();
             ChangeWeather();
-            Console.WriteLine(todaysWeather);
             
+            UI.DisplayInfo(todaysWeather);
+            UI.DisplayInfo(dayOfWeek);
+        }
+
+        public void ChangeDay()
+        {
+            dayOfWeek = daysOfTheWeek[forcastCounter];
         }
 
         public void ChangeHour()

@@ -17,8 +17,8 @@ namespace LemonadeStand
            
 
                 day.StartDay();
-                
-                
+
+            Console.ReadKey();
           
         }
        

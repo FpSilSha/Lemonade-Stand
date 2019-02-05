@@ -9,6 +9,20 @@ namespace LemonadeStand
     {
 
 
+        public static void DisplayInfo(string words)
+        {
+            Console.WriteLine(words);
+        }
+
+        public static void DisplayForcast(List<string> weatherForcast, List<string> daysOfTheWeek)
+        {
+            int loopCount;
+            Console.WriteLine("The current forcast for this week is:");
+            for (loopCount = 0; loopCount < weatherForcast.Count; loopCount++)
+            {
+                Console.WriteLine($"\n{daysOfTheWeek[loopCount]} will be {weatherForcast[loopCount]}");
+            }
+        }
        public static string SetName()
         {
             Console.WriteLine("What name what you like to provide?");
