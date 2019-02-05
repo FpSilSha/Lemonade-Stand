@@ -16,7 +16,7 @@ namespace LemonadeStand
 
         public static void DisplayCurrentDay(string day, string weather)
         {
-            Console.WriteLine($"Today is {day} and it is {weather} outside.");
+            Console.WriteLine($"\nToday is {day} and it is {weather} outside.");
         }
         public static void DisplayForcast(List<string> weatherForcast, List<string> daysOfTheWeek)
         {
@@ -40,9 +40,9 @@ namespace LemonadeStand
             int tryCounter = 0;
             do
             {
-                Console.WriteLine("Please enter a whole number between 0 - 15.");
+                Console.WriteLine("Please enter a whole number");
                 if (tryCounter > 0)
-                    Console.WriteLine("Please keep the whole number between 0 and 15.");
+                    Console.WriteLine("Please keep the whole number positive, and a realistic number of playable days");
                 try
                 {
                     numberCatch = Convert.ToInt16(Console.ReadLine());
@@ -54,11 +54,11 @@ namespace LemonadeStand
                 }
                 catch (FormatException)
                 {
-                    Console.WriteLine("That is not exactly the type of input we are looking for. Please enter a number");
+                    Console.WriteLine("That is not exactly the type of input we are looking for. Please enter a number.");
                 }
                 tryCounter++;
             }
-            while (numberCatch < 0 && numberCatch > 15);
+            while (numberCatch < 0);
 
             return numberCatch;
 
