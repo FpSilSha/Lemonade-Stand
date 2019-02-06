@@ -17,7 +17,8 @@ namespace LemonadeStand
             int optionChoice;
 
             //DISPLAY PRICES FOR EVERYTHING
-            UI.DisplayInfo("What would you like to buy? \n Enter 0 for Cups, 1 for Lemons, 2 for Sugar, and 3 for Ice.");
+            
+            UI.DisplayInfo("\nCurrent price of a lemon is .12. \nCurrent price of a cup of sugar is .09.\n Current price of ice cubes is .07.\nCurrent price of cups are .05 each.\n\n\nWhat would you like to buy? \n Enter 0 for Cups, 1 for Lemons, 2 for Sugar, and 3 for Ice.");
             
             optionChoice = UI.NumberCheck();
 
@@ -57,6 +58,7 @@ namespace LemonadeStand
         {
             UI.DisplayInfo("How many lemons would you like to purchase?");
             int lemonsRequested = UI.NumberCheck();
+            player.wallet += - (Convert.ToDecimal(lemonsRequested) * .12m);
             for (int i = lemonsRequested; i > 0; i--)
             {
                 Lemon lemon = new Lemon();
@@ -69,6 +71,7 @@ namespace LemonadeStand
         {
             UI.DisplayInfo("How man cups of sugar would you like to purchase?");
             int cupsOfSugarRequested = UI.NumberCheck();
+            player.wallet += -(Convert.ToDecimal(cupsOfSugarRequested) * .09m);
             for (int i = cupsOfSugarRequested; i > 0; i--)
             {
                 CupsOfSugar cupOfSugar = new CupsOfSugar();
@@ -81,6 +84,7 @@ namespace LemonadeStand
         {
             UI.DisplayInfo("How many cups would you like to purchase?");
             int cupsRequested = UI.NumberCheck();
+            player.wallet += -(Convert.ToDecimal(cupsRequested) * .05m);
             for (int i = cupsRequested; i > 0; i--)
             {
                 Cups cup = new Cups();
@@ -93,6 +97,7 @@ namespace LemonadeStand
         {
             UI.DisplayInfo("How many lemons would you like to purchase?");
             int iceCubesRequested = UI.NumberCheck();
+            player.wallet += -(Convert.ToDecimal(iceCubesRequested) * .07m);
             for (int i = iceCubesRequested; i > 0; i--)
             {
                 IceCubes iceCube = new IceCubes();
