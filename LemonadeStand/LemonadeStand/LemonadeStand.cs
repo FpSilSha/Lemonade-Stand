@@ -9,6 +9,8 @@ namespace LemonadeStand
     {
         internal decimal pricePerCup = 0.0m;
         LemonadeRecipe standRecipe = new LemonadeRecipe();
+        Inventory inventory = new Inventory();
+
         
 
 

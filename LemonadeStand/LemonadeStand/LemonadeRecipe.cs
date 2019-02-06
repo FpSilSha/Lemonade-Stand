@@ -8,7 +8,6 @@ namespace LemonadeStand
     public class LemonadeRecipe
     {
         int numberOfLemons;
-        
         int numberOfIceCubes;
         int numberOfCupsOfSugar;
 
