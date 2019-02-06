@@ -52,20 +52,22 @@ namespace LemonadeStand
             }
         }
 
-        public void BuyLemonade(Weather weather, LemonadeStand lemonadeStand)
+        public void BuyLemonade(Day day, LemonadeStand lemonadeStand)
         {
-            weatherModifier = CheckWeather(weather);
+            weatherModifier = CheckWeather(day);
             priceModifier = CheckPrice(lemonadeStand);
             buyChance = buyChance - (weatherModifier + priceModifier);
-
-            //if(buyChance > 50)
-            //{
-            //    Buy Lemonade!!
-            //}
+            if(buyChance > 50)
+            {
+                lemonadeStand.cupsInPitcher--;
+                lemonadeStand.cupsSold++;
+                lemonadeStand.inventory.CupsCount.RemoveAt(0);
+            }
+            
 
         }
 
-        private int CheckWeather(Weather weather)
+        private int CheckWeather(Day day)
         {
             int numberChange = 0;
 
@@ -74,15 +76,15 @@ namespace LemonadeStand
                 case "mild":
 
                    
-                    if (weather.todaysWeather == "sunny")
+                    if (day.weather.todaysWeather == "sunny")
                     {
                         numberChange = 10;
                     }
-                    else if (weather.todaysWeather == "cloudy")
+                    else if (day.weather.todaysWeather == "cloudy")
                     {
                         numberChange = -5;
                     }
-                    else if (weather.todaysWeather == "raining")
+                    else if (day.weather.todaysWeather == "raining")
                     {
                         numberChange = -10;
                     }
@@ -91,15 +93,15 @@ namespace LemonadeStand
                 case "picky":
 
                    
-                    if (weather.todaysWeather == "sunny")
+                    if (day.weather.todaysWeather == "sunny")
                     {
                         numberChange = 10;
                     }
-                    else if (weather.todaysWeather == "cloudy")
+                    else if (day.weather.todaysWeather == "cloudy")
                     {
                         numberChange = -10;
                     }
-                    else if (weather.todaysWeather == "raining")
+                    else if (day.weather.todaysWeather == "raining")
                     {
                         numberChange = -15;
                     }
@@ -108,15 +110,15 @@ namespace LemonadeStand
                 case "preferred":
 
                     
-                    if (weather.todaysWeather == "sunny")
+                    if (day.weather.todaysWeather == "sunny")
                     {
                         numberChange = 15;
                     }
-                    else if (weather.todaysWeather == "cloudy")
+                    else if (day.weather.todaysWeather == "cloudy")
                     {
                         numberChange = 5;
                     }
-                    else if (weather.todaysWeather == "raining")
+                    else if (day.weather.todaysWeather == "raining")
                     {
                         numberChange = -5;
                     }

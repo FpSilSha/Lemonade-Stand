@@ -8,7 +8,7 @@ namespace LemonadeStand
     public abstract class Ingredient
     {
 
-        int shelfLife;
+       // int shelfLife;
 
         
 

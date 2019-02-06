@@ -21,7 +21,7 @@ namespace LemonadeStand
 
             do
             {
-                Customer customer = new Customer();
+               
                 day.StartDay();
                 WorkingDay();
 

@@ -9,8 +9,9 @@ namespace LemonadeStand
     {
         public int cupsInPitcher = 10;
         internal decimal pricePerCup = 0.0m;
+        internal int cupsSold = 0;
         LemonadeRecipe standRecipe = new LemonadeRecipe();
-        Inventory inventory = new Inventory();
+        internal Inventory inventory = new Inventory();
         
         public void setCupPrice()
         {
