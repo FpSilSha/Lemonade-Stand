@@ -7,9 +7,9 @@ namespace LemonadeStand
 {
     public class LemonadeRecipe
     {
-        int numberOfLemons;
-        int numberOfIceCubes;
-        int numberOfCupsOfSugar;
+        internal int numberOfLemons;
+        internal int numberOfIceCubes;
+        internal int numberOfCupsOfSugar;
 
         public void SetRecipe()
         {
