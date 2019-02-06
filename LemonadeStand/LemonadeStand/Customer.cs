@@ -13,7 +13,7 @@ namespace LemonadeStand
         private int buyChance;
         private string customerType;
 
-        public Customer(LemonadeStand lemonadeStand)
+        public Customer()
         {
             ChooseType();
             SetChance();
@@ -57,6 +57,7 @@ namespace LemonadeStand
             weatherModifier = CheckWeather(weather);
             priceModifier = CheckPrice(lemonadeStand);
             buyChance = buyChance - (weatherModifier + priceModifier);
+
             //if(buyChance > 50)
             //{
             //    Buy Lemonade!!

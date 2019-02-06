@@ -34,7 +34,7 @@ namespace LemonadeStand
             return nameCatch;
         }
 
-        public static int NumberCheck()
+        public static int IntegerNumberCheck()
         {
             int numberCatch = -1;
             int tryCounter = 0;
@@ -90,7 +90,34 @@ namespace LemonadeStand
             return yesNoCatch;
         }
 
+        public static decimal DecimalNumberCheck()
+        {
+            decimal numberCatch = -1.0m;
+            int tryCounter = 0;
+            do
+            {
+                Console.WriteLine(" \nPlease enter a decimal from 0.0 to 1.00");
+                if (tryCounter > 0)
+                    Console.WriteLine("Please keep the decimal positive, and within the range");
+                try
+                {
+                    numberCatch = Convert.ToDecimal(Console.ReadLine());
 
+                }
+                catch (OverflowException)
+                {
+                    Console.WriteLine("That input value is way too big!");
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("That is not exactly the type of input we are looking for. Please enter a number.");
+                }
+                tryCounter++;
+            }
+            while (numberCatch < 0.0m && numberCatch > 1.0m);
+
+            return numberCatch;
+        }
 
 
 

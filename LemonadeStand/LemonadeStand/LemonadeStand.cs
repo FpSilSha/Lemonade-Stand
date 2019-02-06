@@ -12,7 +12,11 @@ namespace LemonadeStand
         LemonadeRecipe standRecipe = new LemonadeRecipe();
         Inventory inventory = new Inventory();
         
-        
+        public void setCupPrice()
+        {
+            UI.DisplayInfo("\nWhat price would you like to set a cup of lemonade to?");
+            pricePerCup = UI.DecimalNumberCheck();
+        }
         public void createNewPitcher()
         {
             removeLemons();

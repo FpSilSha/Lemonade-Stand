@@ -9,7 +9,7 @@ namespace LemonadeStand
     {
 
 
-        LemonadeStand playerLemStnd = new LemonadeStand();
+        
 
         public string name;
         public decimal wallet = 25.0m;       
