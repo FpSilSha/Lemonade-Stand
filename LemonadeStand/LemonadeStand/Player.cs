@@ -12,7 +12,7 @@ namespace LemonadeStand
         LemonadeStand playerLemStnd = new LemonadeStand();
 
         public string name;
-        public decimal wallet = 0.0m;       
+        public decimal wallet = 20.0m;       
 
        
        

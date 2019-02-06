@@ -53,7 +53,7 @@
     <Compile Include="Inventory.cs" />
     <Compile Include="LemonadeRecipe.cs" />
     <Compile Include="LemonadeStand.cs" />
-    <Compile Include="Lemons.cs" />
+    <Compile Include="Lemon.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

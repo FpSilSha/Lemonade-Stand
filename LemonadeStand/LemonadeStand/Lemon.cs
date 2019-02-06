@@ -7,5 +7,10 @@ namespace LemonadeStand
 {
     public class Lemon : Ingredient
     {
+        public Lemon()
+        {
+
+        }
+
     }
 }
