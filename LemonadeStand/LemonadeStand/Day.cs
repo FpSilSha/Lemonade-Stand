@@ -11,7 +11,7 @@ namespace LemonadeStand
         private int hoursLeft;
         
         
-        private string dayOfWeek;
+        internal string dayOfWeek;
         List<string> daysOfTheWeek = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
         Weather weather = new Weather();
        

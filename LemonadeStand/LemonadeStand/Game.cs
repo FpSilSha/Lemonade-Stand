@@ -9,8 +9,8 @@ namespace LemonadeStand
     {
 
 
-       Player playerOne = new Player();
-       Day day = new Day();
+        Player playerOne = new Player();
+        Day day = new Day();
         LemonadeStand LemStand = new LemonadeStand();
         Store store = new Store();
 
@@ -21,8 +21,9 @@ namespace LemonadeStand
 
             do
             {
+                Customer customer = new Customer();
                 day.StartDay();
-
+                WorkingDay();
 
                 Console.ReadKey();
             }
@@ -33,16 +34,35 @@ namespace LemonadeStand
           
         }
        
-        public void CustomerCreator()
+        public List<Customer> CustomerGenerator()
         {
+            int customerSet;
 
+            if (day.dayOfWeek == "Friday")
+            {
+                customerSet = 100;
+            }
+            else if (day.dayOfWeek == "Saturday" || day.dayOfWeek == "Sunday")
+            {
+                customerSet = 120;
+            }
+            else
+            {
+                customerSet = 85;
+            }
+            List<Customer> customers = new List<Customer>();
+            for(int i =0; i < customerSet; i++)
+            {
+                Customer customer = new Customer();
+                customers.Add(customer);
+            }
+            return customers;
         }
         
         public void WorkingDay()
         {
-            Customer customer = new Customer();
-            CustomerCreator();
-
+           List<Customer> customers = CustomerGenerator();
+           
         }
     }
 }
