@@ -25,8 +25,12 @@ namespace LemonadeStand
             
             do
             {               
-                day.StartDay();                
+                day.StartDay();
+                UI.DisplayInventory(LemStand.inventory);
+                StoreCheck();
+
                 WorkingDay();
+
 
                 Console.ReadKey();
             }
@@ -84,6 +88,17 @@ namespace LemonadeStand
             UI.DisplayInfo("\nOnce in the store, buy everything you need. Don't run out of money too quick! \n Now go back and set a recipe for your lemonade stand, which will take ingredients you have every 10 successful sales, to make another batch.");
             UI.DisplayInfo("\nThis means you'll want to have enough ingredients to complete a day!\nWhen the recipe is set, you can start your day and sell lemonade!\nAt the end of the day, your profit is shown.\nThis process will continue for the amount of days played.");
             UI.DisplayInfo("\n\nSimple, right?");
+        }
+
+        public void StoreCheck()
+        {
+            string answer;
+            UI.DisplayInfo("Would you like to go to the store?");
+            answer = UI.YesNoCheck();
+            if(answer == "yes")
+            {
+                store.StoreMenu(playerOne,LemStand.inventory);
+            }
         }
     }
 }
