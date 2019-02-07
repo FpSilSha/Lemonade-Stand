@@ -80,6 +80,9 @@ namespace LemonadeStand
 
         }
 
-
+        public void GiveMoneyToPlayer(Player player)
+        {
+            player.wallet += dayProfit;
+        }
     }
 }
