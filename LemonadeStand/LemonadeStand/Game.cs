@@ -71,6 +71,12 @@ namespace LemonadeStand
 
         }
 
-        
+        public void HowToPlay()
+        {
+            UI.DisplayInfo("Lets teach you how to play. Once you name yourself, you will be starting up your Lemonade Stand. \n You'll want to buy ingredients by going to the store. ");
+            UI.DisplayInfo("\nOnce in the store, buy everything you need. Don't run out of money too quick! \n Now go back and set a recipe for your lemonade stand, which will take ingredients you have every 10 successful sales, to make another batch.");
+            UI.DisplayInfo("\nThis means you'll want to have enough ingredients to complete a day!\nWhen the recipe is set, you can start your day and sell lemonade!\nAt the end of the day, your profit is shown.\nThis process will continue for the amount of days played.");
+            UI.DisplayInfo("\n\nSimple, right?");
+        }
     }
 }
