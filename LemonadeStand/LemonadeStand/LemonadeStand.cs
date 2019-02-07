@@ -61,10 +61,18 @@ namespace LemonadeStand
 
         public void CalculateDailyProfit()
         {
+
             dayProfit = pricePerCup * Convert.ToDecimal(cupsSold);
 
         }
 
+        public void CalculateTotalProfit()
+        {
+            totalProfit += dayProfit;
+            
+        }
+
+        
 
 
     }
