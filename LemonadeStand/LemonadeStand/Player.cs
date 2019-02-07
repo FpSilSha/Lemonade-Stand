@@ -8,9 +8,6 @@ namespace LemonadeStand
     public class Player
     {
 
-
-        
-
         public string name;
         public decimal wallet = 25.0m;       
 

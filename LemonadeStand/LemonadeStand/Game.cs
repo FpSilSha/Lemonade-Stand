@@ -19,20 +19,21 @@ namespace LemonadeStand
             DisplayRules();
             HowToPlay();
             Console.ReadKey();
-
-            UI.DisplayInfo("How many days would you like to play for? We recommend at least a week(7)!");
+            playerOne.name = UI.SetName();
+            UI.DisplayInfo(" How many days would you like to play for? We recommend at least a week(7)!");            
             int gameLength = UI.IntegerNumberCheck();
-            
+            LemStand.standRecipe.SetRecipe();        
             do
             {               
                 day.StartDay();
                 UI.DisplayInventory(LemStand.inventory);
                 StoreCheck();
-
+                LemStand.setCupPrice();
                 WorkingDay();
 
 
                 Console.ReadKey();
+                Console.Clear();
             }
             while (gameLength > 0);
 
@@ -78,22 +79,22 @@ namespace LemonadeStand
 
         public void DisplayRules()
         {
-            UI.DisplayInfo("Welcome to Lemonade Stand! \n The game is simple: sell lemonade to customers and make money! \n Don't go bankrupt on your quest for cash!");
+            UI.DisplayInfo(" Welcome to Lemonade Stand! \n The game is simple: sell lemonade to customers and make money! \n Don't go bankrupt on your quest for cash!");
 
         }
 
         public void HowToPlay()
         {
-            UI.DisplayInfo("Lets teach you how to play. Once you name yourself, you will be starting up your Lemonade Stand. \n You'll want to buy ingredients by going to the store. ");
-            UI.DisplayInfo("\nOnce in the store, buy everything you need. Don't run out of money too quick! \n Now go back and set a recipe for your lemonade stand, which will take ingredients you have every 10 successful sales, to make another batch.");
-            UI.DisplayInfo("\nThis means you'll want to have enough ingredients to complete a day!\nWhen the recipe is set, you can start your day and sell lemonade!\nAt the end of the day, your profit is shown.\nThis process will continue for the amount of days played.");
-            UI.DisplayInfo("\n\nSimple, right?");
+            UI.DisplayInfo(" Lets teach you how to play. Once you name yourself, you will be starting up your Lemonade Stand. \n You'll want to buy ingredients by going to the store. ");
+            UI.DisplayInfo("\n Once in the store, buy everything you need. Don't run out of money too quick! \n Now go back and set a recipe for your lemonade stand\n The recipe will take ingredients you have every 10 successful sales, to make another batch.");
+            UI.DisplayInfo("\n This means you'll want to have enough ingredients to complete a day!\n When the recipe is set, you can start your day and sell lemonade!\n At the end of the day, your profit is shown.\n This process will continue for the amount of days played.");
+            UI.DisplayInfo("\n\n Simple, right?");
         }
 
         public void StoreCheck()
         {
             string answer;
-            UI.DisplayInfo("Would you like to go to the store?");
+            UI.DisplayInfo(" Would you like to go to the store?");
             answer = UI.YesNoCheck();
             if(answer == "yes")
             {

@@ -10,12 +10,14 @@ namespace LemonadeStand
         public int cupsInPitcher = 10;
         internal decimal pricePerCup = 0.0m;
         internal int cupsSold = 0;
-        LemonadeRecipe standRecipe = new LemonadeRecipe();
+        internal LemonadeRecipe standRecipe = new LemonadeRecipe();
         internal Inventory inventory = new Inventory();
+        internal decimal dayProfit;
+        internal decimal totalProfit;
         
         public void setCupPrice()
         {
-            UI.DisplayInfo("\nWhat price would you like to set a cup of lemonade to?");
+            UI.DisplayInfo("\n What price would you like to set a cup of lemonade to?");
             pricePerCup = UI.DecimalNumberCheck();
         }
         public void createNewPitcher()
@@ -56,6 +58,13 @@ namespace LemonadeStand
                 }
             }
         }
+
+        public void CalculateDailyProfit()
+        {
+            dayProfit = pricePerCup * Convert.ToDecimal(cupsSold);
+
+        }
+
 
 
     }

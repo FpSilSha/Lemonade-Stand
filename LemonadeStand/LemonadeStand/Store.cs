@@ -56,7 +56,7 @@ namespace LemonadeStand
 
         public void BuyLemons(Player player, Inventory inventory)
         {
-            UI.DisplayInfo("How many lemons would you like to purchase?");
+            UI.DisplayInfo(" How many lemons would you like to purchase?");
             int lemonsRequested = UI.IntegerNumberCheck();
             player.wallet += - (Convert.ToDecimal(lemonsRequested) * .12m);
             for (int i = lemonsRequested; i > 0; i--)
@@ -69,7 +69,7 @@ namespace LemonadeStand
 
         public void BuySugar(Player player, Inventory inventory)
         {
-            UI.DisplayInfo("How man cups of sugar would you like to purchase?");
+            UI.DisplayInfo(" How man cups of sugar would you like to purchase?");
             int cupsOfSugarRequested = UI.IntegerNumberCheck();
             player.wallet += -(Convert.ToDecimal(cupsOfSugarRequested) * .09m);
             for (int i = cupsOfSugarRequested; i > 0; i--)
@@ -82,7 +82,7 @@ namespace LemonadeStand
 
         public void BuyCups(Player player, Inventory inventory)
         {
-            UI.DisplayInfo("How many cups would you like to purchase?");
+            UI.DisplayInfo(" How many cups would you like to purchase?");
             int cupsRequested = UI.IntegerNumberCheck();
             player.wallet += -(Convert.ToDecimal(cupsRequested) * .05m);
             for (int i = cupsRequested; i > 0; i--)
@@ -95,7 +95,7 @@ namespace LemonadeStand
 
         public void BuyIce(Player player, Inventory inventory)
         {
-            UI.DisplayInfo("How many lemons would you like to purchase?");
+            UI.DisplayInfo(" How many ice cubes would you like to purchase?");
             int iceCubesRequested = UI.IntegerNumberCheck();
             player.wallet += -(Convert.ToDecimal(iceCubesRequested) * .07m);
             for (int i = iceCubesRequested; i > 0; i--)
