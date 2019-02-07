@@ -129,5 +129,9 @@ namespace LemonadeStand
             UI.DisplayInfo($" You have made {lemonadeStand.dayProfit} dollars today and\n have currently made {lemonadeStand.totalProfit} dollars since you've started");
         }
 
+        public static void DisplayWallet(Player player)
+        {
+            UI.DisplayInfo($" Current Cash: {player.wallet}");
+        }
     }
 }
