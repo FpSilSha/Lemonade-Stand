@@ -72,7 +72,12 @@ namespace LemonadeStand
             
         }
 
-        
+        public void ResetLemonadeStand()
+        {
+            cupsInPitcher = 10;
+            dayProfit = 0.0m;
+
+        }
 
 
     }
