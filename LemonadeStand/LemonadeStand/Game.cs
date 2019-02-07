@@ -28,6 +28,7 @@ namespace LemonadeStand
                 Console.Clear();
                 day.StartDay();
                 UI.DisplayInventory(LemStand.inventory);
+                UI.DisplayWallet(playerOne);
                 StoreCheck();
                 Console.Clear();
                 LemStand.SetCupPrice();
@@ -37,6 +38,7 @@ namespace LemonadeStand
                 LemStand.CalculateTotalProfit();
                 UI.DisplayProfits(LemStand);
                 LemStand.ResetLemonadeStand();
+                UI.DisplayWallet(playerOne);
                 gameLength--;
                 UI.DisplayInfo($"You have {gameLength} days left!");
                 Console.ReadKey();

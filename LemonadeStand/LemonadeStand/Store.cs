@@ -39,7 +39,7 @@ namespace LemonadeStand
                
 
             }
-
+            UI.DisplayWallet(player);
             UI.DisplayInfo("Would you like to make another purchase?");
             string yesNoCatch = UI.YesNoCheck();
 
