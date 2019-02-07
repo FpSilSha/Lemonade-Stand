@@ -28,7 +28,7 @@ namespace LemonadeStand
                 Console.ReadKey();
             }
             while (gameLength > 0);
-                day.StartDay();
+
 
             
           
@@ -64,5 +64,13 @@ namespace LemonadeStand
            List<Customer> customers = CustomerGenerator();
            
         }
+
+        public void DisplayRules()
+        {
+            UI.DisplayInfo("Welcome to Lemonade Stand! \n The game is simple: sell lemonade to customers and make money! \n Don't go bankrupt on your quest for cash!");
+
+        }
+
+        
     }
 }
