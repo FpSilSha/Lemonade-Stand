@@ -69,7 +69,7 @@ namespace LemonadeStand
 
         public void BuySugar(Player player, Inventory inventory)
         {
-            UI.DisplayInfo(" How man cups of sugar would you like to purchase?");
+            UI.DisplayInfo(" How many cups of sugar would you like to purchase?");
             int cupsOfSugarRequested = UI.IntegerNumberCheck();
             player.wallet += -(Convert.ToDecimal(cupsOfSugarRequested) * .09m);
             for (int i = cupsOfSugarRequested; i > 0; i--)
