@@ -61,7 +61,7 @@ namespace LemonadeStand
             {
                 lemonadeStand.cupsInPitcher--;
                 lemonadeStand.cupsSold++;
-                lemonadeStand.inventory.CupsCount.RemoveAt(0);
+                lemonadeStand.inventory.CupsCount.RemoveAt(lemonadeStand.inventory.CupsCount.Count-1);
             }
             
 

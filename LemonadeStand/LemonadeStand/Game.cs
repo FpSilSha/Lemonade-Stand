@@ -16,13 +16,16 @@ namespace LemonadeStand
 
         public void RunGame()
         {
+            DisplayRules();
+            HowToPlay();
+            Console.ReadKey();
+
             UI.DisplayInfo("How many days would you like to play for? We recommend at least a week(7)!");
             int gameLength = UI.IntegerNumberCheck();
-
+            
             do
-            {
-               
-                day.StartDay();
+            {               
+                day.StartDay();                
                 WorkingDay();
 
                 Console.ReadKey();
@@ -61,8 +64,12 @@ namespace LemonadeStand
         
         public void WorkingDay()
         {
-           List<Customer> customers = CustomerGenerator();
-           
+            List<Customer> customers = CustomerGenerator();
+            foreach(Customer customer in customers)
+            {
+                customer.BuyLemonade(day, LemStand);
+            }
+            
         }
 
         public void DisplayRules()

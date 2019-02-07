@@ -119,6 +119,10 @@ namespace LemonadeStand
             return numberCatch;
         }
 
+        public static void DisplayInventory(Inventory inventory)
+        {
+            UI.DisplayInfo($"This is your current inventory:\nLemons:{inventory.lemons.Count}\nCups of sugar:{inventory.CupsOfSugarCount.Count}\nIceCubes:{inventory.IceCubesCount.Count}\nCups{inventory.CupsCount.Count}");
+        }
 
 
     }
