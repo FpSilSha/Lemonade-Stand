@@ -30,7 +30,7 @@ namespace LemonadeStand
                 UI.DisplayInventory(LemStand.inventory);
                 StoreCheck();
                 Console.Clear();
-                LemStand.setCupPrice();
+                LemStand.SetCupPrice();
                 WorkingDay();
                 LemStand.CalculateDailyProfit();
                 LemStand.GiveMoneyToPlayer(playerOne);
@@ -78,6 +78,10 @@ namespace LemonadeStand
             List<Customer> customers = CustomerGenerator();
             foreach(Customer customer in customers)
             {
+                if(LemStand.cupsInPitcher == 0)
+                {
+                    LemStand.CreateNewPitcher();
+                }
                 customer.BuyLemonade(day, LemStand);
             }
             

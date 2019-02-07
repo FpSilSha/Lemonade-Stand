@@ -15,20 +15,20 @@ namespace LemonadeStand
         internal decimal dayProfit;
         internal decimal totalProfit;
         
-        public void setCupPrice()
+        public void SetCupPrice()
         {
             UI.DisplayInfo("\n What price would you like to set a cup of lemonade to?");
             pricePerCup = UI.DecimalNumberCheck();
         }
-        public void createNewPitcher()
+        public void CreateNewPitcher()
         {
-            removeLemons();
-            removeSugar();
-            removeIce();
+            RemoveLemons();
+            RemoveSugar();
+            RemoveIce();
             cupsInPitcher = 10;
         }
 
-        private void removeLemons()
+        private void RemoveLemons()
         {
             if(standRecipe.numberOfLemons < inventory.lemons.Count)
             {                           
@@ -38,7 +38,7 @@ namespace LemonadeStand
                  }
             }
         }
-        private void removeSugar()
+        private void RemoveSugar()
         {
             if (standRecipe.numberOfCupsOfSugar < inventory.CupsOfSugarCount.Count)
             {
@@ -48,7 +48,7 @@ namespace LemonadeStand
                 }
             }
         }
-        private void removeIce()
+        private void RemoveIce()
         {
             if (standRecipe.numberOfIceCubes < inventory.IceCubesCount.Count)
             {
