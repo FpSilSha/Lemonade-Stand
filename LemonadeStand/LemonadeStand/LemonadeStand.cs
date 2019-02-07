@@ -63,6 +63,7 @@ namespace LemonadeStand
         {
 
             dayProfit = pricePerCup * Convert.ToDecimal(cupsSold);
+            
 
         }
 

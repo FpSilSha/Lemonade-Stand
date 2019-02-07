@@ -124,6 +124,10 @@ namespace LemonadeStand
             UI.DisplayInfo($"This is your current inventory:\nLemons:{inventory.lemons.Count}\nCups of sugar:{inventory.CupsOfSugarCount.Count}\nIceCubes:{inventory.IceCubesCount.Count}\nCups{inventory.CupsCount.Count}");
         }
 
+        public static void DisplayProfits(LemonadeStand lemonadeStand)
+        {
+            UI.DisplayInfo($" You have made {lemonadeStand.dayProfit} dollars today and\n have currently made {lemonadeStand.totalProfit} dollars since you've started");
+        }
 
     }
 }
