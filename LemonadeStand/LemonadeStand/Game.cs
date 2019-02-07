@@ -24,14 +24,18 @@ namespace LemonadeStand
             int gameLength = UI.IntegerNumberCheck();
             LemStand.standRecipe.SetRecipe();        
             do
-            {               
+            {
+                Console.Clear();
                 day.StartDay();
                 UI.DisplayInventory(LemStand.inventory);
                 StoreCheck();
+                Console.Clear();
                 LemStand.setCupPrice();
                 WorkingDay();
-
-
+                LemStand.CalculateDailyProfit();
+                LemStand.GiveMoneyToPlayer(playerOne);
+                LemStand.CalculateTotalProfit();
+                LemStand.ResetLemonadeStand();
                 Console.ReadKey();
                 Console.Clear();
             }

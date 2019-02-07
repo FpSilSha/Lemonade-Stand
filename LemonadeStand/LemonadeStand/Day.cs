@@ -7,10 +7,7 @@ namespace LemonadeStand
 {
     public class Day
     {
-        private int daysLeft;
-        private int hoursLeft;
-        
-        
+          
         internal string dayOfWeek;
         List<string> daysOfTheWeek = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
         internal Weather weather = new Weather();
