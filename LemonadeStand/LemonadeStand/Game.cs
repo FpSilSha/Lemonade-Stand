@@ -36,8 +36,10 @@ namespace LemonadeStand
                 LemStand.GiveMoneyToPlayer(playerOne);
                 LemStand.CalculateTotalProfit();
                 LemStand.ResetLemonadeStand();
+                UI.DisplayInfo($"You have {gameLength} days left!");
                 Console.ReadKey();
                 Console.Clear();
+
             }
             while (gameLength > 0);
 

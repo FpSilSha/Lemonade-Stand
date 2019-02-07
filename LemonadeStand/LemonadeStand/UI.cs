@@ -133,5 +133,7 @@ namespace LemonadeStand
         {
             UI.DisplayInfo($" Current Cash: {player.wallet}");
         }
+
+      
     }
 }
